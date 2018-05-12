@@ -1,0 +1,96 @@
+
+  <div class="banner">
+    <img src="__home__/images/examples_banner.jpg">
+  </div>
+
+  <div class="examples">
+
+    <div class="examples-box">
+      <!--当前位置-->
+      <div class="loc">
+        <ul>
+          <li>您当前的位置：成功案例</li>
+          <li>案例列表</li>
+        </ul>
+      </div>
+
+      {volist name="list" id="vo"}
+      <!--案例列表-->
+      <div class="examples-list">
+        <!--标题-->
+        <h3>{$vo['permit_time']} 购房定居 | 恭喜{$vo['name']}成功入户广州</h3>
+        <!--内容盒子-->
+        <div class="examples-list-box">
+          <!--左-->
+          <div class="list-lf fl">
+
+            <ul>
+
+              <li>
+                <a href="{:url('home/index/cases',['id'=>$vo['id']])}">
+                  <i class="i_1"></i>
+                  <span class="colour">成功入户时间：</span>
+                  <span class="time_num">{$vo['permit_time']}</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="{:url('home/index/cases',['id'=>$vo['id']])}">
+                  <i class="i_2"></i>
+                  <span class="colour">年龄：</span>
+                  <span class="desc">{$vo['age']}</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="{:url('home/index/cases',['id'=>$vo['id']])}">
+                  <i class="i_3"></i>
+                  <span class="colour">学历：</span>
+                  <span class="desc">本科</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="{:url('home/index/cases',['id'=>$vo['id']])}">
+                  <i class="i_4"></i>
+                  <span class="colour">籍贯：</span>
+                  <span class="desc">{$vo['native_place']}</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="{:url('home/index/cases',['id'=>$vo['id']])}">
+                  <i class="i_5"></i>
+                  <span class="colour">入户方式：</span>
+                  <span class="desc">积分入户/技能入户/学历入户/毕业生接收</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="{:url('home/index/cases',['id'=>$vo['id']])}">
+                  <i class="i_6"></i>
+                  <span class="colour">入户办理操作流程：</span>
+                  <span class="desc">{$vo['content']|htmlspecialchars_decode|strip_tags|subtext=25}......</span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <!--右 图片-->
+          <div class="list-img fr">
+            <img src="{$vo['image']}">
+          </div>
+
+        </div>
+      </div>
+      {/volist}
+      
+
+    <!--分页-->
+        <div class="pag">
+          <div class="message" style="text-align:left;">共<i class="blue" style="color:blue;" >{$count}</i>条记录，当前显示第&nbsp;<i class="blue" style="color:blue;" >{$currentPage}&nbsp;</i>页</div>  
+            {$page}
+        </div> 
+  </div>
+

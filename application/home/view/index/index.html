@@ -1,0 +1,254 @@
+<!-- 轮播 -->
+  <div class="banner">
+    <!--插件轮播-->
+    <div id="slideBox" class="slideBox">
+      <div class="bd">
+        <ul>
+        {volist name="banner_data" id="vo"}
+          <li>
+            <a href="{$vo['link_url']}" target="_blank" style="background-image: url({$vo['image']})"></a>
+          </li>
+        {/volist}
+        </ul>
+      </div>
+      <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+      <a class="prev" href="javascript:void(0)"></a>
+      <a class="next" href="javascript:void(0)"></a>
+    </div>
+
+    <!--轮播详情盒子-->
+    <div class="banner-box">
+      <div class="banner-content">
+        <!--消息 通告-->
+        <div class="messages">
+          <h3><i></i>广州入户新政公告 : </h3>
+          <p>
+            <marquee behavior="left" loop="infinite" scrollamount="5">明年将限制入户人口,根据社保年限排队入户,今年还有最后一次免排入户机会,2-3个月即可拿入户指标卡,现在申报可享受1000——2000元入户补贴!</marquee></p>
+        </div>
+        <!--列表-->
+        <div class="banner-list">
+          <ul>
+          {volist name="news_list" id="vo"}
+            <li>
+              <a href="{:url('/home/index/notice',['id'=>$vo['id'] ])}" >
+                <div class="list-img"><img src="{$vo.image}"></div>
+                <div class="list-box">
+                  <dl>
+                    <dt>{$vo.title}</dt>
+                    <dd>{$vo['content']|htmlspecialchars_decode|strip_tags|subtext=50}</dd>
+
+                  </dl>
+                </div>
+              </a>
+            </li>
+          {/volist}
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 主体 -->
+  <div id="section">
+
+    <!--六大福利-->
+    <div class="welfare">
+      <h1>仅需3个月，享尽粤户<span>6大福利</span></h1>
+      <!--盒子-->
+      <div class="welfare-box">
+        <ul>
+          <li>
+            <a href="">
+              <img src="__home__/images/welfare_01.jpg">
+
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="__home__/images/welfare_02.jpg">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="__home__/images/welfare_03.jpg">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="__home__/images/welfare_04.jpg">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="__home__/images/welfare_05.jpg">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="__home__/images/welfare_06.jpg">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--服务范围-->
+    <div class="service">
+      <div class="service-box">
+        <!--标题-->
+        <div class="service-title">
+          <h1>广州入户服务范围</h1>
+          <h3>为您提供最权威的入户信息</h3>
+        </div>
+        <!--入户咨询-->
+        <div class="consult">
+          <dl>
+            <dt>学历入户</dt>
+            <dd>1、全日制本科学历35岁以下</dd>
+            <dd>2、硕士4学历40岁以下</dd>
+            <dd>3、有学历和学位证书</dd>
+            <dd>4、在广州有购买社保</dd>
+            <dd>
+              <a href="">入户咨询</a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>技能入户</dt>
+            <dd>1、紧缺高级工35岁以下</dd>
+            <dd>2、技师40岁以下</dd>
+            <dd>3、高级技师45岁以下</dd>
+            <dd>4、在广州有购买社保</dd>
+            <dd>
+              <a href="">入户咨询</a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>积分入户</dt>
+            <dd>1、45岁以下</dd>
+            <dd>2、有办理广东省居住证</dd>
+            <dd>3、符合计划生育政策</dd>
+            <dd>4、积分满60分</dd>
+            <dd>
+              <a href="">入户咨询</a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>毕业生接收</dt>
+            <dd>1、全日制本科或以上学历</dd>
+            <dd>2、毕业两年之内有学士学位</dd>
+            <dd>3、计划生育证明</dd>
+            <dd>4、报到证、入职证明</dd>
+            <dd>
+              <a href="">入户咨询</a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <!--测试一下-->
+<div class="test">
+      <div class="test-box">
+        <div class="test-content">
+
+          <!--表单-->
+          <form action="{:url('home/index/test')}" method="post">
+
+            <div class="form-item">
+              <i class="i_1"></i>
+              <label class="form-label">*您的姓名</label>
+              <input type="text" name="name" placeholder="请填写真实姓名">
+            </div>
+
+            <div class="form-item">
+              <i class="i_2"></i>
+              <label class="form-label">*您的手机</label>
+              <input type="text" name="phone" placeholder="请填写真实手机">
+            </div>
+
+            <div class="form-item">
+              <i class="i_3"></i>
+              <label class="form-label">*您的学历</label>
+              <select name="education_code">
+                <option value="1">本科</option>
+                <option value="2">高中</option>
+                <option value="3">专科</option>
+                <option value="4">本科以上</option>
+                <option value="5">其他</option>
+              </select>
+            </div>
+
+            <div class="form-item">
+              <i class="i_4"></i>
+              <label class="form-label">*您的年龄</label>
+              <select name="age">
+                <option value="1">18-22</option>
+                <option value="2">23-34</option>
+                <option value="3">35-40</option>
+                <option value="4">41-45</option>
+              </select>
+            </div>
+
+            <div class="form-item">
+              <i class="i_5"></i>
+              <label class="form-label">*您的社保</label>
+              <input type="text" name="insurance" placeholder="社保按年算">
+            </div>
+
+            <div class="form-item">
+              <i class="i_6"></i>
+              <label class="form-label">*有无房产</label>
+              <select name="is_property">
+                <option value="Y">有</option>
+                <option value="N">无</option>
+              </select>
+            </div>
+              <button class="btn" type="submit" >
+                <a href="#">
+                  <img src="__home__/images/test_box_btn.png">
+                </a>
+              </button>
+          </form>
+          
+        </div>
+      </div>
+     
+    
+  
+  <!--右侧固定栏  入户咨询-->
+  <div class="f-consult">
+    <ul>
+      <li class="f-consult-title">
+        <a href="">广州入户咨询</a>
+      </li>
+      <li>
+        <a href="">入户政策咨询</a>
+      </li>
+      <li>
+        <a href="">入户条件咨询</a>
+      </li>
+      <li>
+        <a href="">广州入户咨询</a>
+      </li>
+      <li>
+        <a href="">学历入户咨询</a>
+      </li>
+      <li>
+        <a href="">技能入户咨询</a>
+      </li>
+      <li>
+        <a href="">积分入户咨询</a>
+      </li>
+      <li>
+        <a href="">应届生入户咨询</a>
+      </li>
+      <li>
+        <a href="">入户办理流程</a>
+      </li>
+      <li>
+        <a class="return_top">返回顶部</a>
+      </li>
+    </ul>
+  </div>
+  

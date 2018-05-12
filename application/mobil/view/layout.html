@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>入户百事通手机首页</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <link rel="stylesheet" href="__mobil__/css/commom.css">
+  <link rel="stylesheet" href="__mobil__/css/swiper.min.css">
+  <link rel="stylesheet" href="__mobil__/css/mindex.css">
+</head>
+<body>
+  <!--头部-->
+  <div id="header">
+    <a href="{:url('mobil/index/index')}">
+      <div class="header-logo">
+        <img src="__mobil__/images/logo.png" alt="">
+      </div>
+    </a>
+    <div class="header-phone">
+      <i></i>
+      <span>020-87572189</span>
+    </div>
+  </div>
+
+  <!-- 轮播 -->
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      {volist name="banner_data" id="vo"}
+      <div class="swiper-slide"><img src="{$vo['image']}"></div>
+      {/volist}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+<!-- 以上头部 -->
+
+{__CONTENT__}
+
+<!-- 以下脚部 -->
+
+  <div id="footer">
+    <ul>
+      <li>广州穗惠人力资源有限公司©版权所有</li>
+      <li>服务热线：020-87572189</li>
+      <li>粤备案号：粤ICP备17044742号</li>
+      <li>地址：广州市天河区天河路490号1803室</li>
+    </ul>
+  </div>
+  
+</body>
+</html>

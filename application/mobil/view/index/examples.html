@@ -1,0 +1,44 @@
+<!--案列内容部分-->
+  <div class="example">
+    {volist name="list" id="vo"}
+    <div class="example-item">
+      <a href="{:url('mobil/index/cases',['id'=>$vo['id']])}">
+        <!--图片-->
+        <div class="item-img">
+          <img width="20" src="{$vo['image']}">
+        </div>
+        <!--内容-->
+        <div class="item-desc">
+
+          <h1>{$vo['permit_time']} 购房定居 | 恭喜{$vo['name']}成功入户广州</h1>
+          <div class="item-content">
+            <p>{$vo['content']|htmlspecialchars_decode|strip_tags|subtext=25}......</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    {/volist}
+
+    <!--分页-->
+        <div class="pag">
+          <div class="message" style="text-align:left;">共<i class="blue" style="color:blue;" >{$count}</i>条记录，当前显示第&nbsp;<i class="blue" style="color:blue;" >{$currentPage}&nbsp;</i>页</div>  
+            {$page}
+        </div> 
+  </div>
+<!--案列内容部分-->
+  
+<!--js部分-->
+  <script src="__mobil__/js/jquery-1.10.2.min.js"></script>
+  <script src="__mobil__/js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      slidesPerView: 1,
+      paginationClickable: true,
+      spaceBetween: 30,
+      loop: true
+    });
+  </script>
+<!--js部分-->

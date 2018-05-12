@@ -1,0 +1,38 @@
+  <!-- 内容部分 -->
+  <div class="details">
+    <!--标题-->
+    <div class="details-title">
+      <h1>{$new_data['title']}</h1>
+      <div class="article-info">
+        <span class="info-src">{$new_data['author']}</span>
+        <span class="info-date">{$new_data['add_time']}</span>
+        <!-- <span class="info-time">09:32</span> -->
+      </div>
+    </div>
+    <!--内容-->
+    <div class="details-content">
+    {$new_data['content']|htmlspecialchars_decode}
+<!--       <p>酷骑单车的员工们没有想到自己这个十一会这么难熬，9月22日，酷骑单车突然强制解散全国各分公司，并同时要求各分公司员工签署离职协议书，不签署即不会发放工资。</p>
+      <div class="content-img">
+        <img src="../images/banner_01.jpg">
+      </div>
+      <p>对此，一位酷骑离职前员工向网易科技爆料了高唯伟和P2P平台诚信贷之间真实的关系、押金退还中出现的猫腻、被并购的虚实以及酷骑单车实际的掌权人等等。</p>
+ -->    </div>
+  </div>
+  <!-- 内容部分 -->
+
+  <!--js部分-->
+  <script src="__mobil__/js/jquery-1.10.2.min.js"></script>
+  <script src="__mobil__/js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      slidesPerView: 1,
+      paginationClickable: true,
+      spaceBetween: 30,
+      loop: true
+    });
+  </script>
+<!--js部分-->

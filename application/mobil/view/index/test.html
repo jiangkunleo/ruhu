@@ -1,0 +1,75 @@
+ <div class="test">
+    <div class="test-box">
+      <div class="test-content">
+
+        <!--表单-->
+        <form  action="{:url('mobil/index/test')}" method="post">
+
+          <div class="form-item">
+            <label class="form-label">*您的姓名</label>
+            <input type="text" name="name" placeholder="请填写真实姓名">
+          </div>
+
+          <div class="form-item">
+            <label class="form-label">*您的手机</label>
+            <input type="text" name="phone" placeholder="请填写真实手机">
+          </div>
+
+          <div class="form-item">
+            <label class="form-label">*您的学历</label>
+            <select  name="education_code">
+                <option value="1">本科</option>
+                <option value="2">高中</option>
+                <option value="3">专科</option>
+                <option value="4">本科以上</option>
+                <option value="5">其他</option>
+            </select>
+          </div>
+
+          <div class="form-item">
+            <label class="form-label">*您的年龄</label>
+            <select  name="age">
+                <option value="1">18-22</option>
+                <option value="2">23-34</option>
+                <option value="3">35-40</option>
+                <option value="4">41-45</option>
+            </select>
+          </div>
+
+          <div class="form-item">
+            <label class="form-label">*您的社保</label>
+            <input type="text" name="insurance" placeholder="社保按年算">
+          </div>
+
+          <div class="form-item">
+            <label class="form-label">*有无房产</label>
+            <select  name="is_property">
+              <option value="Y">有</option>
+              <option value="N">无</option>
+            </select>
+          </div>
+
+          <!--评测按钮-->
+          <button class="btn" type="submit"  >
+            <img src="../images/test_box_btn.png">
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="__mobil__/js/jquery-1.10.2.min.js"></script>
+  <script src="__mobil__/js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      slidesPerView: 1,
+      paginationClickable: true,
+      spaceBetween: 30,
+      loop: true
+    });
+  </script>

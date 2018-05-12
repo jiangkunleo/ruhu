@@ -1,0 +1,40 @@
+
+ <div class="banner">
+    <img src="__home__/images/examples_banner.jpg">
+  </div>
+
+  <div class="newDetails">
+    <!---->
+    <div class="nd-box">
+
+      {volist name="list" id="vo"}
+      <div class="nd-item">
+        <a href="{:url('home/index/policydet',['id'=>$vo['id']])}">
+          <!--图片-->
+          <div class="nd-img">
+            <img src="{$vo['image']}">
+          </div>
+          <!---->
+          <div class="nd-desc">
+            <h1>{$vo['title']}</h1>
+            <div class="nd-content">
+              <p>
+              {$vo['content']|htmlspecialchars_decode|strip_tags|subtext=60}......  
+              </p>
+              <div>
+                <span class="writer">占坑</span>
+                <span class="">新闻</span>
+                <span class="time">{$vo['add_time']}</span>
+              </div>
+            </div>
+
+          </div>
+        </a>
+      </div>
+      {/volist}
+      <div class="pag">
+          <div class="message" style="text-align:left;">共<i class="blue" style="color:blue;" >{$count}</i>条记录，当前显示第&nbsp;<i class="blue" style="color:blue;" >{$currentPage}&nbsp;</i>页</div>
+          {$page}
+      </div>       
+    </div>
+  </div>

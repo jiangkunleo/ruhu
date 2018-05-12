@@ -1,0 +1,233 @@
+  <div id="section">
+    <!---->
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="{:url('mobil/index/test')}"><img src="__mobil__/images/tb_3.png"></a>
+        </li>
+        <li>
+          <a href="{:url('mobil/index/flow')}"><img src="__mobil__/images/tb_2.png"></a>
+        </li>
+        <li>
+          <a href="{:url('mobil/index/examples')}"><img src="__mobil__/images/tb_1.png"></a>
+        </li>
+        <li>
+          <a href="{:url('mobil/index/policy')}"><img src="__mobil__/images/tb_4.png"></a>
+        </li>
+      </ul>
+    </div>
+
+    <!--第一模块-->
+    <div class="s1">
+      <!--标题-->
+      <div class="section-title">
+        <h3>政策新变化，入户新规划</h3>
+        <div class="spacing"><img src="__mobil__/images/bt_x.png"></div>
+      </div>
+      <!---->
+      <div class="s1-box">
+        <ul>
+          <li class="c1">
+            <div>
+              <h3>1.放开计生</h3>
+              <p class="desc">不再要求计生证明，但需自觉接受处理，并自行承担相应后果</p>
+            </div>
+          </li>
+          <li class="c2">
+            <div>
+              <h3>1.放开计生</h3>
+              <p class="desc">不再要求计生证明，但需自觉接受处理，并自行承担相应后果</p>
+            </div>
+          </li>
+          <li class="c3">
+            <div>
+              <h3>1.放开计生</h3>
+              <p class="desc">不再要求计生证明，但需自觉接受处理，并自行承担相应后果</p>
+            </div>
+          </li>
+          <li class="c4">
+            <div>
+              <h3>1.放开计生</h3>
+              <p class="desc">不再要求计生证明，但需自觉接受处理，并自行承担相应后果</p>
+            </div>
+          </li>
+        </ul>
+        <button class="btn">申报条件 ></button>
+      </div>
+    </div>
+
+    <!--第六模块-->
+    <div class="s6">
+      <!--标题-->
+      <div class="section-title">
+        <h3>快仅需30天，尽享粤户6大福利</h3>
+        <div class="spacing"><img src="__mobil__/images/bt_x.png"></div>
+      </div>
+
+      <!---->
+      <div class="s6-box">
+        <img src="__mobil__/images/rh_fl.png">
+      </div>
+
+    </div>
+
+    <!--第三模块-->
+    <div class="s3">
+      <!--标题-->
+      <div class="section-title">
+        <h3>不确定适合哪种方式入户？30秒测试下</h3>
+        <div class="spacing"><img src="__mobil__/images/bt_x.png"></div>
+      </div>
+      <!---->
+      <div class="s3-box">
+        <form id="dataForm" action="{:url('mobil/index/test')}" method="post">
+          <div class="form-item">
+            <label class="form-label">您的姓名：</label>
+            <input type="text" name="name">
+          </div>
+          <div class="form-item">
+            <label class="form-label">您的年龄：</label>
+            <select name="age">
+                <option value="1">18-22</option>
+                <option value="2">23-34</option>
+                <option value="3">35-40</option>
+                <option value="4">41-45</option>
+            </select>
+          </div>
+          <div class="form-item">
+            <label class="form-label">最高学历：</label>
+            <select name="education_code">
+                <option value="1">本科</option>
+                <option value="2">高中</option>
+                <option value="3">专科</option>
+                <option value="4">本科以上</option>
+                <option value="5">其他</option>
+            </select>
+          </div>
+          <div class="form-item">
+            <label class="form-label">社保年限：</label>
+            <input type="text" name="insurance">
+          </div>
+          <div class="form-item">
+            <label class="form-label">广州房产：</label>
+            <select name="is_property">
+              <option value="Y">有</option>
+              <option value="N">无</option>
+            </select>
+          </div>
+          <div class="form-item">
+            <label class="form-label">接收手机：</label>
+            <input type="text" name="phone">
+          </div>
+          <div class="form-item">
+            <button class="btn" type="submit" >提交信息</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--第四模块-->
+    <div class="s4">
+      <!--标题-->
+      <div class="section-title">
+        <h3>一分钟看懂入户流程</h3>
+        <div class="spacing"><img src="__mobil__/images/bt_x.png"></div>
+      </div>
+      <!---->
+      <div class="s4-box">
+        <div class="img">
+          <img src="__mobil__/images/mflow_1.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!--第五模块-->
+    <div class="s5">
+      <!--标题-->
+      <div class="section-title">
+        <h3>入户案例</h3>
+        
+        <div class="spacing"><img src="__mobil__/images/bt_x.png"></div>
+        
+      </div>
+      <!--入户政策-->
+      <div class="s5-box">
+        <h1><i>5年</i>默默耕耘，只为稳妥入户</h1>
+        <div class="spacing">
+          <img src="__mobil__/images/rh_al.png">
+        </div>
+
+        <!---->
+        <div class="picMarquee-top">
+          <div class="bd">
+            <ul class="picList">
+              {volist name="cases_list" id="vo"}
+              <li>
+                <div class="pic">
+                  <a href="{:url('mobil/index/cases')}" target="_blank">
+                    <img width="100%"  height="150" src="{$vo['image']}"/>
+                  </a>
+                </div>
+              </li>
+              {/volist}
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--第二模块-->
+    <div class="s2">
+      <!--标题-->
+      <div class="section-title">
+        <h3>2017入户方案、选对方式事半功倍</h3>
+        <div class="spacing"><img src="__mobil__/images/bt_x.png"></div>
+      </div>
+      <!---->
+      <div class="s2-box">
+        <ul>
+          <li>
+            <a href="">
+              <img src="__mobil__/images/rh_jf.png">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="__mobil__/images/rh_jf.png">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="__mobil__/images/rh_jf.png">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="__mobil__/images/rh_jf.png">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="__mobil__/js/jquery-1.10.2.min.js"></script>
+  <script src="__mobil__/js/swiper.min.js"></script>
+  <script src="__mobil__/js/jquery.SuperSlide.2.1.1.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      slidesPerView: 1,
+      paginationClickable: true,
+      spaceBetween: 30,
+      loop: true
+    });
+    $(".picMarquee-top").slide({
+      mainCell: ".bd ul",
+      autoPlay: true,
+      effect: "topMarquee",
+      vis: 2,
+      interTime: 30
+    });
+  </script>
